@@ -1,18 +1,17 @@
 import { Input } from "@/components/atoms"
+import styles from './InputGroupView.module.scss'
 
 interface InputGroupProps {
     title: string,
-    error: string
 }
 
 
-export const InputGroupView = ({title, error}:InputGroupProps) => {
+export const InputGroupView = ({title}:InputGroupProps) => {
     return (
-       <>
-        <label>{title}</label>
+       <div className={styles.container}>
+        <label className={styles.header}>{title}</label>
         <Input/>
-        <span>{error}</span>
-        </>
+        </div>
     )
 }
 

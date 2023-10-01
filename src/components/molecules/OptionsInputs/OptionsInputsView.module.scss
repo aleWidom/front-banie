@@ -1,0 +1,14 @@
+@import '../../../styles/config';
+
+.button {
+    border: none;
+    background-color: $color-primary;;
+    color: $color-secondary;
+    margin: 1rem;
+}
+
+
+.button:hover {
+    cursor: pointer;
+   
+}

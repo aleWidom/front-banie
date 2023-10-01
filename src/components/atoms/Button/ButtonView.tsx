@@ -1,3 +1,4 @@
+import styles from './ButtonView.module.scss'
 
 interface ButtonProps {
     type: "submit" | "reset",
@@ -6,7 +7,7 @@ interface ButtonProps {
 
 export const ButtonView = ({type, textButton}: ButtonProps) => {
     return (
-        <button type={type}>{textButton}</button>
+        <button type={type} className={styles.button}>{textButton}</button>
     )
 }
 
