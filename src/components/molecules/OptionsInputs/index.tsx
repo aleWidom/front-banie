@@ -3,94 +3,146 @@ import { useContext } from "react";
 import { InputContext } from "@/context/input";
 import { OptionsInputsView } from "./OptionsInputsView";
 
+
+const styleInputBase = {
+	border: "black 1px solid",
+}
+
+const styleInputError = {
+	border: "red 1px solid",
+    color: "red"
+}
+
+const styleInputSuccess = {
+	border: "green 1px solid",
+}
+
+const styleInputWithLeft = {
+	border: "black 1px solid",
+}
+
+const styleInputDisabled= {
+	border: "black 1px solid",
+     opacity: 0.5
+}
+
+const styleInputSecurity= {
+	border: "black 1px solid",
+}
+
+
 export const OptionsInputs = () => {
   
   const { inputState, setInputState } = useContext(InputContext);
 
   const handleClickBaseEmail = () => {
     setInputState({
-      ...inputState,
-      email: "Base",
+      type: "Text",
+      placeholder: "Base",
+      value: "",
+      styleInput:styleInputBase
     });
   };
 
-  const handleClickErrorEmail = () => {
-    setInputState({
-      ...inputState,
-      email: "Error",
-    });
+ const handleClickErrorEmail = () => {
+  setInputState({
+    type: "Text",
+    placeholder: "Error",
+    value: "",
+    styleInput:styleInputError
+  });
   };
 
   const handleClickSuccessEmail = () => {
     setInputState({
-      ...inputState,
-      email: "Success",
+      type: "Text",
+      placeholder: "Success",
+      value: "",
+      styleInput:styleInputSuccess
     });
-  };
+ };
 
   const handleClickLeftEmail = () => {
     setInputState({
-      ...inputState,
-      email: "Left Component",
+      type: "Text",
+      placeholder: "Left Component",
+      value: "",
+      styleInput:styleInputWithLeft
     });
-  };
+   };
 
   const handleDisabledEmail = () => {
     setInputState({
-      ...inputState,
-      email: "Disabled",
+      type: "Text",
+      placeholder: "Disabled",
+      value: "",
+      styleInput: styleInputDisabled 
     });
   };
 
-  const handleSecuredEmail = () => {
+   const handleSecuredEmail = () => {
     setInputState({
-      ...inputState,
-      email: "Secured",
+      type: "Text",
+      placeholder: "Secured",
+      value: "",
+      styleInput:styleInputSecurity
     });
-  };
+};
 
-  const handleClickBasePassword = () => {
+   const handleClickBasePassword = () => {
     setInputState({
-      ...inputState,
-      password: "Base",
+      type: "Text",
+      placeholder: "Base",
+      value: "",
+      styleInput:styleInputBase
     });
   };
 
-  const handleClickErrorPassword = () => {
+   const handleClickErrorPassword = () => {
     setInputState({
-      ...inputState,
-      password: "Error",
+      type: "Text",
+      placeholder: "Base",
+      value: "",
+      styleInput:styleInputBase
     });
   };
 
 
-  const handleClickSuccessPassword = () => {
-    setInputState({
-      ...inputState,
-      password: "Success",
-    });
-  };
+ const handleClickSuccessPassword = () => {
+  setInputState({
+    type: "Text",
+    placeholder: "Base",
+    value: "",
+    styleInput:styleInputBase
+  });
+   };
 
   const handleClickLeftPassword = () => {
     setInputState({
-      ...inputState,
-      password: "Left Component",
+      type: "Text",
+      placeholder: "Base",
+      value: "",
+      styleInput:styleInputBase
     });
-  };
+ };
 
-  const handleDisabledPassword = () => {
+   const handleDisabledPassword = () => {
     setInputState({
-      ...inputState,
-      password: "Disabled",
+      type: "Text",
+      placeholder: "Base",
+      value: "",
+      styleInput:styleInputBase
     });
-  };
+ };
 
-  const handleSecuredPassword = () => {
+   const handleSecuredPassword = () => {
     setInputState({
-      ...inputState,
-      password: "Secured",
+      type: "Text",
+      placeholder: "Base",
+      value: "",
+      styleInput:styleInputBase
     });
-  };
+   };
 
 
   return (
@@ -98,19 +150,12 @@ export const OptionsInputs = () => {
       <OptionsInputsView
         title={"Botón estado Email"}
         handleClickBaseEmail={handleClickBaseEmail}
-        handleClickErrorEmail={handleClickErrorEmail}
+         handleClickErrorEmail={handleClickErrorEmail}
         handleClickSuccessEmail={handleClickSuccessEmail}
-        handleClickLeftEmail={handleClickLeftEmail}
+         handleClickLeftEmail={handleClickLeftEmail}
         handleDisabledEmail={handleDisabledEmail}
-        handleSecuredEmail={handleSecuredEmail}
-        handleClickBasePassword={handleClickBasePassword}
-        handleClickErrorPassword={handleClickErrorPassword}
-        handleClickSuccessPassword={handleClickSuccessPassword}
-        handleClickLeftPassword={handleClickLeftPassword}
-        handleDisabledPassword={handleDisabledPassword}
-        handleSecuredPassword={handleSecuredPassword}
+         handleSecuredEmail={handleSecuredEmail}
       />
-      {/* <OptionsInputsView title={"Botón estado Password"} handleClickBase={handleClickBase} handleClickError={handleClickError} handleClickSuccess={handleClickSuccess} handleClickLeft={handleClickLeft} handleDisabled={handleDisabled} handleSecured={handleSecured}/>*/}
     </>
   );
 };

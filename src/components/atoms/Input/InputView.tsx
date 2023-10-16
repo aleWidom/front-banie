@@ -8,7 +8,7 @@ interface InputProps {
   valueInputPassword?: string;
   handleChangePassord?: any;
   styleInput: any;
-  error?: string;
+  error: any;
   children?: React.ReactNode;
 }
 

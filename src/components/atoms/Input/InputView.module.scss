@@ -3,7 +3,7 @@
 
 .containerInputError{
     position: relative;
-    width: 50%;
+    width: 100%;
 }
 
 .error {
@@ -27,7 +27,7 @@
 
 .children {
 position: absolute;
-left: 170px;
+right: 0%;
 font-size: 14px;
-top: 2px;
+bottom: 0%;
 }

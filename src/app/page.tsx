@@ -9,7 +9,7 @@ export default function Home() {
       <OptionsInputs />
       <div className={styles.containerForm}>
         <InputLabel titleLabel={"Email"} />
-        <InputLabel titleLabel={"Password"} />
+        {/* <InputLabel titleLabel={"Password"} /> */}
         <Button />
       </div>
     </div>
