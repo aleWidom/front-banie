@@ -9,7 +9,6 @@ const styleInputBase = {
 	border: "black 1px solid",
 }
 
-
 const styleInputError = {
 	border: "red 1px solid",
     color: "red"
@@ -34,28 +33,29 @@ const styleInputSecurity= {
 
 export const Input = () => {
 
-    const [valueInput, setValueInPut] = useState("")
+    const {inputState}= useContext(InputContext)
 
-    const {input}= useContext(InputContext)
+    const [valueInputEmail, setValueInPutEmail] = useState("")
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValueInPut(e.target.value)
+    const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setValueInPutEmail(e.target.value)
     }
     
     return (
         <>
-        {input.type === "Base" && <InputView type={'text'} textPlaceHolder="Input Base" valueInput={valueInput} handleChange={handleChange} styleInput={styleInputBase}/>}
-        {input.type === "Error" && <InputView type={'text'} textPlaceHolder="Input Error" valueInput={valueInput} handleChange={handleChange} styleInput={styleInputError} error={'Debe colocar los datos correctamente.'}/>}
-        {input.type === "Success" && <InputView type={'text'} textPlaceHolder="Success" valueInput={valueInput} handleChange={handleChange} styleInput={styleInputSuccess}/>}
-        {input.type === "Left Component" && 
-        <InputView type={'text'}textPlaceHolder="Left Component" valueInput={valueInput} handleChange={handleChange} styleInput={styleInputWithLeft}>
+        {inputState.email === "Base" && <InputView type={'text'} textPlaceHolder="Input Base" valueInputEmail={valueInputEmail} handleChangeEmail={handleChangeEmail} styleInput={styleInputBase}/>}
+        {inputState.email  === "Error" && <InputView type={'text'} textPlaceHolder="Input Error" valueInputEmail={valueInputEmail} handleChangeEmail={handleChangeEmail} styleInput={styleInputError} error={'Debe colocar los datos correctamente.'}/>}
+        {inputState.email  === "Success" && <InputView type={'text'} textPlaceHolder="Success" valueInputEmail={valueInputEmail} handleChangeEmail={handleChangeEmail} styleInput={styleInputSuccess}/>}
+        {inputState.email  === "Left Component" && 
+        <InputView type={'text'}textPlaceHolder="Left Component" valueInputEmail={valueInputEmail} handleChangeEmail={handleChangeEmail} styleInput={styleInputWithLeft}>
             <FaCheck/>
         </InputView>}
-        {input.type === "Disabled" && <InputView type={'text'}textPlaceHolder="Disabled" valueInput={valueInput} handleChange={handleChange} styleInput={styleInputDisabled}/>}
-        {input.type === "Secured" && 
-        <InputView type={'password'} textPlaceHolder="Secured" valueInput={valueInput} handleChange={handleChange} styleInput={styleInputSecurity}>
+        {inputState.email  === "Disabled" && <InputView type={'text'}textPlaceHolder="Disabled" valueInputEmail={valueInputEmail} handleChangeEmail={handleChangeEmail} styleInput={styleInputDisabled}/>}
+        {inputState.email  === "Secured" && 
+        <InputView type={'password'} textPlaceHolder="Secured" valueInputEmail={valueInputEmail} handleChangeEmail={handleChangeEmail} styleInput={styleInputSecurity}>
             <FaLock/>
         </InputView>}
+      
         </>
     )
 }

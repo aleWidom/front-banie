@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react';
 import { InputContext } from './InputContext';
-import { Input } from '@/interfaces';
+import { StateInputs } from '@/interfaces';
 
 interface Props {
 	children: JSX.Element | JSX.Element[];
@@ -9,15 +9,15 @@ interface Props {
 
 export const InputProvider = ({ children }: Props) => {
 
-	const [input, setTypeInput] = useState<Input>({
-		type: "Base"
+	const [inputState, setInputState] = useState<StateInputs>({
+		email: "Base",
+		password: "Base"
 	});
 
 	return (
 		<InputContext.Provider
 			value={{
-                input,
-				setTypeInput
+				inputState, setInputState
 			}}
 		>
 			{children}

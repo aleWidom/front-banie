@@ -1,10 +1,21 @@
 @import '../../../styles/config';
 
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .button {
     border: none;
+    width: 45%;
+    height: 40px;
     background-color: $color-primary;;
     color: $color-secondary;
-    margin: 1rem;
+    margin: 0.25rem;
 }
 
 

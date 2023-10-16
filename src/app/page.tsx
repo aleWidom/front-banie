@@ -1,18 +1,17 @@
 import { Button } from "@/components/atoms";
-import { InputGroup } from "@/components/molecules";
-import styles from "./page.module.scss";
+import { InputLabel } from "@/components/molecules";
 import { OptionsInputs } from "@/components/molecules/OptionsInputs";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.container}>
       <OptionsInputs />
-      <div className={styles.container}>
-        <div className={styles.containerForm}>
-        <InputGroup />
+      <div className={styles.containerForm}>
+        <InputLabel titleLabel={"Email"} />
+        <InputLabel titleLabel={"Password"} />
         <Button />
-        </div>
       </div>
-    </>
+    </div>
   );
 }

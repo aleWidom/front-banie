@@ -1,21 +1,19 @@
-import styles from "./InputView.module.scss";
+import styles from "./InputPasswordView.module.scss";
 
 interface InputProps {
   type: string;
   textPlaceHolder: string;
-  valueInputEmail: string;
-  handleChangeEmail: any;
-  valueInputPassword?: string;
-  handleChangePassord?: any;
+  valueInputPassword: string;
+  handleChangePassword: any;
   styleInput: any;
   error?: string;
   children?: React.ReactNode;
 }
 
-export const InputView = ({
+export const InputPasswordView = ({
   textPlaceHolder,
-  valueInputEmail,
-  handleChangeEmail,
+  valueInputPassword,
+  handleChangePassword,
   styleInput,
   type,
   error,
@@ -27,8 +25,8 @@ export const InputView = ({
         <input
           type={type}
           placeholder={textPlaceHolder}
-          value={valueInputEmail}
-          onChange={handleChangeEmail}
+          value={valueInputPassword}
+          onChange={handleChangePassword}
           style={styleInput}
           className={styles.input}
         />

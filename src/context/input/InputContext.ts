@@ -1,11 +1,12 @@
 "use client"
 import { createContext } from 'react';
-import { Input } from '@/interfaces/interfaces';
+import { StateInputs} from '@/interfaces';
+
 
 
 interface ContextProps {
-	input : Input;
-	setTypeInput: (description: Input) => void;
+	inputState : StateInputs;
+	setInputState: (description: StateInputs) => void;
 }
 
 export const InputContext = createContext({} as ContextProps);
