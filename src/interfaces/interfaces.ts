@@ -1,7 +1,7 @@
 
 
 export interface InfoButtonsState {
-    type: "Text",
+    type: "text",
     placeholder: string,
     value: "",
     styleInput: {}

@@ -3,34 +3,34 @@ import styles from "./InputView.module.scss";
 interface InputProps {
   type: string;
   textPlaceHolder: string;
-  valueInputEmail: string;
-  handleChangeEmail: any;
-  valueInputPassword?: string;
-  handleChangePassord?: any;
   styleInput: any;
   error: any;
+  register:any;
+  htmlFor: string;
   children?: React.ReactNode;
 }
 
 export const InputView = ({
   textPlaceHolder,
-  valueInputEmail,
-  handleChangeEmail,
   styleInput,
   type,
   error,
   children,
+  register,
+  htmlFor,
 }: InputProps) => {
+
+  console.log(register)
+
   return (
     <div className={styles.containerInputError}>
       <div className={styles.containerInput}>
         <input
           type={type}
           placeholder={textPlaceHolder}
-          value={valueInputEmail}
-          onChange={handleChangeEmail}
           style={styleInput}
           className={styles.input}
+          {...register(htmlFor)}
         />
         <span className={styles.children}>{children}</span>
       </div>

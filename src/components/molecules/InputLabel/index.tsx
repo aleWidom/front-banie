@@ -1,17 +1,17 @@
 "use client"
-import { useContext } from "react"
-import { InputContext } from "@/context/input"
 import { InputLabelView } from "./InputLabelView"
 
 
 interface InputGroupProps {
-    titleLabel: string
+    titleLabel: string;
+    htmlFor: string;
+    register: any
 }
 
 
-export const InputLabel = ({titleLabel}: InputGroupProps) => {
+export const InputLabel = ({titleLabel, htmlFor, register}: InputGroupProps) => {
     return (
-        <InputLabelView titleLabel={titleLabel}/>
+        <InputLabelView titleLabel={titleLabel} htmlFor={htmlFor} register={register}/>
     )
 }
 

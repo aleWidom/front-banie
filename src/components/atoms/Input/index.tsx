@@ -1,24 +1,26 @@
 "use client"
-import { useContext, useState } from "react"
+import { useContext } from "react"
+import { useForm } from "react-hook-form";
 import { InputView } from "./InputView"
 import { InputContext } from "@/context/input"
 import { FaLock, FaCheck } from "react-icons/fa6";
 
 
+interface InputProps {
+  htmlFor : string;
+  register: any
+}
 
-
-export const Input = () => {
+export const Input = ({htmlFor, register}:InputProps) => {
 
     const {inputState}= useContext(InputContext)
 
-    const [valueInputEmail, setValueInPutEmail] = useState("")
-
-    const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValueInPutEmail(e.target.value)
-    }
+    // const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     setValueInPutEmail(e.target.value)
+    // }
 
     return (
-              <InputView type={inputState.type} textPlaceHolder={inputState.placeholder} valueInputEmail={inputState.value} handleChangeEmail={handleChangeEmail} styleInput={inputState.styleInput} error={inputState.placeholder === "Error" && "Debe colocar los datos correctamente."}>
+              <InputView type={"text"} register={register} htmlFor={htmlFor} textPlaceHolder={inputState.placeholder} styleInput={inputState.styleInput} error={inputState.placeholder === "Error" && "Debe colocar los datos correctamente."}>
                 {inputState.placeholder === "Left Component" && <FaCheck/>}
                 {inputState.placeholder === "Secured" &&  <FaLock/>}
               </InputView>
