@@ -1,18 +1,10 @@
 
-.container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Lato', sans-serif;
-    border: solid;
-    padding: 2rem;
-}
-
 .containerForm {
-    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    padding: 1rem;
 }

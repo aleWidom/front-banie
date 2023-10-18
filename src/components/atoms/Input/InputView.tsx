@@ -4,9 +4,10 @@ interface InputProps {
   type: string;
   textPlaceHolder: string;
   styleInput: any;
-  error: any;
+  errors: any;
   register:any;
   htmlFor: string;
+  validation?: any;
   children?: React.ReactNode;
 }
 
@@ -14,13 +15,12 @@ export const InputView = ({
   textPlaceHolder,
   styleInput,
   type,
-  error,
+  errors,
   children,
   register,
   htmlFor,
+  validation,
 }: InputProps) => {
-
-  console.log(register)
 
   return (
     <div className={styles.containerInputError}>
@@ -30,11 +30,11 @@ export const InputView = ({
           placeholder={textPlaceHolder}
           style={styleInput}
           className={styles.input}
-          {...register(htmlFor)}
+          {...register(htmlFor, validation)}
         />
         <span className={styles.children}>{children}</span>
       </div>
-      <span className={styles.error}>{error}</span>
+      {errors?.message && <span className={styles.error}>{errors.message}</span>}
     </div>
   );
 };
