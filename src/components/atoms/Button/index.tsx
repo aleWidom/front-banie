@@ -1,10 +1,15 @@
+import { ButtonHTMLAttributes } from "react";
 
-import {ButtonView} from './ButtonView'
+import styles from "./Button.module.scss";
 
-
-export const Button = () => {
-    return (
-        <ButtonView type="submit" textButton='Enviar'/>
-    )
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    text: string;
 }
 
+export const Button = ({ type, text, ...props }: ButtonProps) => {
+    return (
+        <button {...props} type={type} className={styles.button}>
+            {text}
+        </button>
+    );
+};

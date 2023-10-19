@@ -1,0 +1,15 @@
+@import "../../../styles/config";
+
+.button {
+    background-color: $color-primary;
+    color: $color-secondary;
+    border: none;
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
