@@ -8,8 +8,11 @@
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
+    margin-top: 24px;
+   
 }
 .button:disabled {
     background-color: gray;
     cursor: not-allowed;
+
 }

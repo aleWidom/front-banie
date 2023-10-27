@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import styles from "./Home.module.scss";
 
 export default function Home() {
@@ -9,9 +10,12 @@ export default function Home() {
                 <h1 className={styles.heading}>Estas en la home</h1>
                 <div className={styles.containerLinks}>
                     <h3 className={styles.heading}>Links</h3>
-                    <a className={styles.link} href="/login">
+                    <Link className={styles.link} href="/login">
                         {"Go to login ->"}
-                    </a>
+                    </Link>
+                    <Link className={styles.link} href="/register">
+                        {"Go to register ->"}
+                    </Link>
                 </div>
             </div>
         </div>

@@ -9,17 +9,22 @@ interface Props {
 
 export const InputProvider = ({ children }: Props) => {
   const [inputState, setInputState] = useState<InfoButtonsState>({
-    type: "Text",
+    type: "text",
     placeholder: "Base",
     value: "",
     styleInput: {},
   });
+
+
+  const [visiblePassword, setVisiblePassword]= useState(false)
 
   return (
     <InputContext.Provider
       value={{
         inputState,
         setInputState,
+        visiblePassword, 
+        setVisiblePassword
       }}
     >
       {children}
