@@ -1,9 +1,8 @@
-
-export interface InputProps  {
-    type?: string;
-    placeholder?: string;
-    required?: boolean ;  
-    visiblePassword?: boolean;
-    onChange: any
+export interface InputProps {
+  type?: string;
+  placeholder?: string;
+  required?: boolean;
+  // visiblePassword?: boolean;
+  onChange: any;
+  isSecure?: boolean;
 }
-
