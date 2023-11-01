@@ -14,13 +14,11 @@ import { registerUser } from "../../../services/register";
 import styles from "./Register.module.scss";
 import { FormValuesRegister } from "./Register.types";
 import {
-  validationEmail,
-  validationLastName,
-  validationName,
   validationPassword,
-  validationUserName,
 } from "./Register.constants";
 import Link from "next/link";
+
+
 
 export default function Register() {
   // const {visiblePassword, setVisiblePassword} = useContext(InputContext)
@@ -32,6 +30,7 @@ export default function Register() {
     register,
     formState: { errors, isDirty, isValid, isLoading },
     setValue,
+    watch
     // Tipamos el useForm para que podamos usar bien los errores.
   } = useForm<FormValuesRegister>({
     mode: "onBlur",
@@ -53,6 +52,7 @@ export default function Register() {
       });
   });
 
+
   return (
     <div className={styles.container}>
       {/* Crear tamaños de botones -> small, medium y bug */}
@@ -70,34 +70,37 @@ export default function Register() {
         <div className={styles.containerInputs}>
           <h2>Register</h2>
           <InputContainer
-            label="Username"
-            errorsMessage={errors.userName?.message}
+            label="Password"
+            errorsMessage={errors.password?.message}
           >
             <Input
-              {...register("userName", validationUserName)}
-              placeholder="Crear username"
-            />
-          </InputContainer>
-          <InputContainer label="Email" errorsMessage={errors.email?.message}>
-            <Input
-              {...register("email", validationEmail)}
-              type="email"
-              placeholder="Escribe tu email"
-            />
-          </InputContainer>
-          <InputContainer label="Name" errorsMessage={errors.name?.message}>
-            <Input
-              {...register("name", validationName)}
-              placeholder="Escribe tu nombre"
+              {...register("password", validationPassword)}
+              type="password"
+              isSecure
+              placeholder="Escribe tu contraseña"
             />
           </InputContainer>
           <InputContainer
-            label="Last Name"
-            errorsMessage={errors.lastName?.message}
+            label="Confirm Password"
+            errorsMessage={errors.confirmPassword?.message}
           >
             <Input
-              {...register("lastName", validationLastName)}
-              placeholder="Escribe tu apellido"
+              {...register("confirmPassword", {
+                required: {
+                  value: true,
+                  message: "Debe confirmar la contraseña",
+                },
+                validate: (value: any) => {
+                  if (value === watch("password")) {
+                    return true
+                  } else {
+                    return "Las contraseñas no coinciden"
+                  }
+                }
+              })}
+              type="password"
+              isSecure
+              placeholder="Confirmá tu contraseña"
             />
           </InputContainer>
           <InputContainer label="Image" errorsMessage={errors.image?.message}>
@@ -110,19 +113,7 @@ export default function Register() {
               placeholder="Sube una imagen"
             />
           </InputContainer>
-          <InputContainer
-            label="Password"
-            errorsMessage={errors.password?.message}
-          >
-            <Input
-              {...register("password", validationPassword)}
-              type="password"
-              isSecure
-              placeholder="Escribe tu contraseña"
-            />
-          </InputContainer>
         </div>
-
         <Button
           type="submit"
           text="Crear cuenta"

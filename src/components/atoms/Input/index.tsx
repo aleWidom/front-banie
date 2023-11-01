@@ -42,7 +42,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           autoCorrect="off"
           className={styles.input}
         />
-        <span className={styles.securedIcon}>
+        <div className={styles.securedIcon}>
           {/* {placeholder === "Escribe tu contraseña" &&
             visiblePassword === false && (
               <div onClick={handlePassword}>
@@ -59,11 +59,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           {isSecure && (
             // Con el prev, se maneja el estado del useState adentro de la funcion, y no dependes de que se actualice el "visible" para hacerlo.
             // Es mas apropiado hacerlo asi, cuando queres invertir el valor
-            <button onClick={() => setVisible((prev) => !prev)}>
+            <span onClick={() => setVisible((prev) => !prev)}>
               {visible ? <FaEye /> : <FaEyeSlash />}
-            </button>
+            </span>
           )}
-        </span>
+        </div>
       </div>
     );
   }
