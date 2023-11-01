@@ -1,7 +1,7 @@
 "use client";
 // Librerias -> react, luego next, y luego librerias
-import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 
 // Componentes y resto
 import { Button, Input } from "@/components/atoms";
@@ -40,6 +40,8 @@ export default function Login() {
                 console.log(err);
             });
     });
+
+    console.log(errors)
 
     return (
         <div className={styles.container}>
