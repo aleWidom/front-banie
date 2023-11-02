@@ -57,14 +57,11 @@ export default function Register() {
     <div className={styles.container}>
       {/* Crear tamaños de botones -> small, medium y bug */}
 
-      {/* <Link href="/">
+    * <Link href="/">
         <Button
           text="Volver"
-          onClick={() => {
-            setVisiblePassword(false);
-          }}
         />
-      </Link> */}
+      </Link> 
 
       <form onSubmit={onSubmit} className={styles.containerForm}>
         <div className={styles.containerInputs}>
@@ -115,6 +112,7 @@ export default function Register() {
           </InputContainer>
         </div>
         <Button
+          size="large"
           type="submit"
           text="Crear cuenta"
           // Cuando haya conexion con el endpoint vamos a usar el loading para deshabilitar el boton

@@ -1,6 +1,6 @@
 @import "../../../styles/config";
 
-.button {
+.button{
     background-color: $color-primary;
     color: $color-secondary;
     border: none;
@@ -8,11 +8,23 @@
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 24px;
-   
+    margin-top: 24px; 
 }
+
 .button:disabled {
     background-color: gray;
     cursor: not-allowed;
 
+}
+
+.small {
+    width: 50px;
+}
+
+.medium {
+    width: 100px;
+}
+
+.large {
+    width: 100%
 }

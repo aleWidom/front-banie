@@ -87,6 +87,7 @@ export default function Login() {
         <Button
           type="submit"
           text="Ingresar"
+          size="large"
           // Cuando haya conexion con el endpoint vamos a usar el loading para deshabilitar el boton
           // isValid + isDirty, chequea que no hayan errores en el formulario para habilitar el envio de datos, asi evitamos request al pedo
           disabled={!isDirty || !isValid || isLoading}
