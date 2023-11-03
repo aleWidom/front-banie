@@ -56,8 +56,7 @@ export default function Register() {
   return (
     <div className={styles.container}>
       {/* Crear tamaños de botones -> small, medium y bug */}
-
-    * <Link href="/">
+   <Link href="/">
         <Button
           text="Volver"
         />

@@ -1,0 +1,18 @@
+.iconInactive {
+  font-size: 24px;
+  z-index: 1;
+}
+
+.iconActive {
+  font-size: 24px;
+  z-index: 1;
+  position: relative;
+  left: 90%;
+  top: 20px
+}
+
+@media (min-width: 768px) {
+  .icon {
+    display: none;
+  }
+}
