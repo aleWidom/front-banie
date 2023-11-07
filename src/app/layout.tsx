@@ -14,7 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <InputProvider>
-        <body className={styles.body}>{children}</body>
+        <body className={styles.body}>
+          {children}
+          </body>
       </InputProvider>
     </html>
   );

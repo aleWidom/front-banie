@@ -22,7 +22,7 @@ const NavLinks: FC<NavLinksProps> = ({ menuActive, width }: NavLinksProps) => {
           </div>
           <MainLinks />
         </>}
-        {width > 768 &&  <MainLinks />}
+        {menuActive === false && width > 768 &&  <MainLinks />}
     </ul >
   )
 };

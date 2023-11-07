@@ -12,17 +12,40 @@
 
   
 .list:hover {
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(39, 32, 32);
 }
 
 .link {
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   font-size: 1rem;
-  color: #fff;
+  color: $color-primary;
+
+}
+
+.link:hover {
+  color: $color-secondary;
 }
 
 @media (min-width:768px) {
   .list {
+    height: 20px;
+  }
+
+  .list:hover {
+    background-color: $color-secondary;
+
+  }
+
+  .link:hover {
     color: $color-primary;
+    font-weight: bold;
+  }
+
+  .link:focus {
+    color: $color-primary;
+    font-weight: bold;
   }
 }

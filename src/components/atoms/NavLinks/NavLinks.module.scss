@@ -1,16 +1,16 @@
 
+@import '../../../styles/config';
 
 .ulNavMobile {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
-  background-color: rgb(0, 222, 189);
   position: absolute;
   top: 0px;
   margin: 0;
   padding: 0;
+  background-color: rgb(255, 241, 222);
 }
 
 .containerHeaderNavbarMovile {
@@ -26,11 +26,7 @@
   .ulNavDesktop {
     display: flex;
     flex-direction: row;
-    width: 50%;
-    height: 40px;
-    top: 0px;
-    right: 0px;
-    background: none;
-    background-color: green;
+    justify-content: center;
+    width: 65%;
   }
 }

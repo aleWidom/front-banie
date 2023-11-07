@@ -1,8 +1,6 @@
 "use client";
-
-import Link from "next/link";
-import styles from "./Home.module.scss";
 import { Navbar } from "@/components/molecules/";
+import styles from "./Home.module.scss";
 
 
 export default function Home() {
