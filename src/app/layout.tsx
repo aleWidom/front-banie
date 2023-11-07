@@ -4,6 +4,7 @@ export const metadata = {
 };
 
 import { InputProvider } from "@/context/input";
+import { Navbar } from "@/components/molecules";
 import styles from "./RootLayout.module.scss";
 
 export default function RootLayout({
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <InputProvider>
         <body className={styles.body}>
+        <Navbar/>
           {children}
           </body>
       </InputProvider>

@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useLayoutEffect, useState } from "react";
 import Link from "next/link";
 import Brand from "@/components/atoms/Brand";
