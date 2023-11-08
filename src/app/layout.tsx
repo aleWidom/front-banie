@@ -14,11 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* Acordate q el input provider no iba.  */}
       <InputProvider>
         <body className={styles.body}>
-        <Navbar/>
+          <Navbar />
           {children}
-          </body>
+        </body>
       </InputProvider>
     </html>
   );

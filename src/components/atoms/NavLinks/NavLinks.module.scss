@@ -1,5 +1,5 @@
-
-@import '../../../styles/config';
+// Evitar el ../../
+@import "../../../styles/config";
 
 .ulNavMobile {
   width: 100%;
@@ -21,8 +21,7 @@
   align-items: center;
 }
 
-
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .ulNavDesktop {
     display: flex;
     flex-direction: row;
