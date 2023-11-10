@@ -1,9 +1,5 @@
 "use client";
 // Librerias -> react, luego next, y luego librerias
-
-import { useContext } from "react";
-import { InputContext } from "@/context/input";
-import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 // Componentes y resto
@@ -18,15 +14,11 @@ import { validationEmail, validationPassword } from "./Login.constants";
 import Link from "next/link";
 
 export default function Login() {
-  const { visiblePassword, setVisiblePassword } = useContext(InputContext);
-
-  const router = useRouter();
 
   const {
     handleSubmit,
     register,
     formState: { errors, isDirty, isValid, isLoading },
-    // Tipamos el useForm para que podamos usar bien los errores.
   } = useForm<FormValuesLogin>({
     mode: "onBlur",
   });
@@ -49,13 +41,9 @@ export default function Login() {
 
   return (
     <div className={styles.container}>
-      {/* Crear tamaños de botones -> small, medium y bug */}
       <Link href="/">
         <Button
           text="Volver"
-          onClick={() => {
-            setVisiblePassword(false);
-          }}
         />
       </Link>
 
@@ -75,8 +63,6 @@ export default function Login() {
           >
             <Input
               {...register("password", validationPassword)}
-              // type={visiblePassword === false ? "password" : "text"}
-              //   visiblePassword={visiblePassword}
               type="password"
               isSecure
               placeholder="Escribe tu contraseña"
@@ -88,8 +74,6 @@ export default function Login() {
           type="submit"
           text="Ingresar"
           size="large"
-          // Cuando haya conexion con el endpoint vamos a usar el loading para deshabilitar el boton
-          // isValid + isDirty, chequea que no hayan errores en el formulario para habilitar el envio de datos, asi evitamos request al pedo
           disabled={!isDirty || !isValid || isLoading}
         />
       </form>
