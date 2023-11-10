@@ -1,4 +1,10 @@
-.brand {
-    margin: 10px;
-    border: solid;
-} 
+
+.brandMenuActive {
+    display: none;
+}
+
+@media (min-width:768px) {
+    .brandMenuActive {
+     display: block;
+    }
+  }

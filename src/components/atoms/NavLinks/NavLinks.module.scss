@@ -1,7 +1,7 @@
 // Evitar el ../../
 @import "../../../styles/config";
 
-.ulNavMobile {
+.ulNavContainerMenuActive {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -10,22 +10,35 @@
   top: 0px;
   margin: 0;
   padding: 0;
-  background-color: rgb(255, 241, 222);
+  background-color: rgb(253, 221, 176);
 }
 
-.containerHeaderNavbarMovile {
-  width: 100%;
-  background-color: burlywood;
-  height: 80px;
-  display: flex;
-  align-items: center;
-}
+ .ulNavContainerMenuInactive {
+    display: none;
+  }
+
+  .containerHeaderNavbarMovile {
+    width: 100%;
+    background-color: burlywood;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+
+
 
 @media (min-width: 768px) {
-  .ulNavDesktop {
+  .ulNavContainerMenuInactive {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 65%;
+
+    .containerHeaderNavbarMovile {
+      height: 80px;
+    }
+
   }
+
 }

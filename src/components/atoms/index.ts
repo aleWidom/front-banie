@@ -4,3 +4,4 @@ export * from "./Label";
 export * from "./Brand";
 export * from "./MenuIcon";
 export * from "./NavLinks";
+export * from './MainLinks';

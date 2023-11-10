@@ -7,11 +7,11 @@
   font-size: 24px;
   z-index: 1;
   position: relative;
-  left: 85%;
+  left: 75%;
 }
 
 @media (min-width: 768px) {
-  .icon {
+  .iconInactive {
     display: none;
   }
 }

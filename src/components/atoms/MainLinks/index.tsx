@@ -10,7 +10,7 @@ import styles from "./MainLinks.module.scss";
 // Y luego dentro de cada categoria -> /categoria/${category}/${id}
 // Vamos a tener una pagina dinamica que sea igual para todas la cateogorias, pero donde en la pagina, segun la categoria, se muestre distintas imagenes, textos, etc. Pero misma estructura
 
-const MainLinks = () => {
+export const MainLinks = () => {
   return (
     <>
       <li className={styles.list}>
@@ -47,4 +47,4 @@ const MainLinks = () => {
   );
 };
 
-export default MainLinks;
+
