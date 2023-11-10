@@ -20,3 +20,6 @@ export const InputContainer = ({
     {!!errorsMessage && <span className={styles.error}>{errorsMessage}</span>}
   </div>
 );
+
+
+export default InputContainer;
