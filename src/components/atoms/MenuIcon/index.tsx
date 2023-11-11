@@ -4,24 +4,27 @@ import styles from "./MenuIcon.module.scss";
 
 interface MenuIconProps {
   menuActive: boolean;
-  setMenuActive: any
+  setMenuActive: any;
 }
 
-const MenuIcon: FC<MenuIconProps> = ({ menuActive, setMenuActive}: MenuIconProps) => {
-
+const MenuIcon: FC<MenuIconProps> = ({
+  menuActive,
+  setMenuActive,
+}: MenuIconProps) => {
   const handleMenu = () => {
     setMenuActive(!menuActive);
   };
 
   return (
     <>
-        <section className={menuActive ? styles.iconActive : styles.iconInactive}>
-          {menuActive ? (
-            <FaRegWindowClose onClick={handleMenu} />
-          ) : (
-            <FaBars onClick={handleMenu} />
-          )}
-        </section>
+      {/* Unificar estilos para no repetir codigo */}
+      <section className={menuActive ? styles.iconActive : styles.iconInactive}>
+        {menuActive ? (
+          <FaRegWindowClose onClick={handleMenu} />
+        ) : (
+          <FaBars onClick={handleMenu} />
+        )}
+      </section>
     </>
   );
 };
