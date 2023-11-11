@@ -1,18 +1,20 @@
-"use client"
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css/navigation';
-import 'swiper/css';
-import {CardProductHome}  from '@/components/molecules';
-import { Product } from '../CardProductHome/CardProductHome.types';
-import styles from './CardCategoriesHome.module.scss'
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/navigation";
+import "swiper/css";
+import { CardProductHome } from "@/components/molecules";
+import { Product } from "../CardProductHome/CardProductHome.types";
+import styles from "./CardCategoriesHome.module.scss";
 
 interface CardCategoriesHomeProps {
   products: Product[];
-  title: string
+  title: string;
 }
 
-
-export const CardCategoriesHome = ({ products, title }: CardCategoriesHomeProps) => {
+export const CardCategoriesHome = ({
+  products,
+  title,
+}: CardCategoriesHomeProps) => {
   return (
     <div className={styles.cards}>
       <h3>{title}</h3>
@@ -24,10 +26,7 @@ export const CardCategoriesHome = ({ products, title }: CardCategoriesHomeProps)
         ))}
       </Swiper>
     </div>
-  )
-}
-
+  );
+};
 
 export default CardCategoriesHome;
-
-
