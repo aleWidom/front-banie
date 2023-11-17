@@ -1,7 +1,7 @@
 import axios from "axios";
 
-import endpoints from "@/config/endpoints.json";
-import { QueryKeys } from "@/types/QueryKeys";
+// import endpoints from "@/config/endpoints.json";
+// import { QueryKeys } from "@/types/QueryKeys";
 
 export interface ListProductResponse {
   products: {
@@ -19,17 +19,13 @@ export interface ListProductResponse {
   }[];
 }
 
-
-async function useListProduct () {
-	try {
-		const allProducts = await axios.get(`https://dummyjson.com/products`);
-		return allProducts.data 
-
-	} catch (err) {
-		console.log(err);
-	}
+async function useListProduct() {
+  try {
+    const allProducts = await axios.get(`https://dummyjson.com/products`);
+    return allProducts.data;
+  } catch (err) {
+    console.log(err);
+  }
 }
 
-export  {useListProduct};
-
-
+export { useListProduct };
