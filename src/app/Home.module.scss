@@ -12,3 +12,33 @@
         gap: 20px;
     }
 }
+
+
+/* styles.css */
+
+/* Estilos generales aquí */
+
+/* Estilos específicos para Swiper */
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: red;
+}
+
+.swiper-pagination {
+    background-color: green;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 340px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+        /* Oculta los botones de navegación en pantallas pequeñas */
+    }
+
+    .swiper-pagination {
+        display: none;
+        /* Oculta la paginación en pantallas pequeñas */
+    }
+}

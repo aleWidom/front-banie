@@ -1,0 +1,29 @@
+/* SwiperComponent.css */
+
+/* Estilos específicos para Swiper */
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+    /* Ajusta los estilos de los botones de navegación aquí */
+}
+
+
+@media (min-width: 768px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
+        color: grey;
+        /* Oculta los botones de navegación en pantallas pequeñas */
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        font-size: 1rem;
+    }
+
+    .swiper-pagination {
+        display: none;
+        /* Oculta la paginación en pantallas pequeñas */
+    }
+}

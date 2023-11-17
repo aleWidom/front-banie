@@ -1,4 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 import endpoints from "@/config/endpoints.json";
@@ -20,13 +19,17 @@ export interface ListProductResponse {
   }[];
 }
 
-const useListProduct = () =>
-  useQuery({
-    queryKey: [QueryKeys.LIST_PRODUCT],
-    queryFn: () =>
-      axios
-        .get<ListProductResponse>("https://dummyjson.com/products")
-        .then((res) => res.data),
-  });
 
-export default useListProduct;
+async function useListProduct () {
+	try {
+		const allProducts = await axios.get(`https://dummyjson.com/products`);
+		return allProducts.data 
+
+	} catch (err) {
+		console.log(err);
+	}
+}
+
+export  {useListProduct};
+
+

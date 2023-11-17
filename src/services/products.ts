@@ -1,4 +1,4 @@
-import api from "@/lib/api";
+/* import api from "@/lib/api";
 import endpoints from "@/config/endpoints.json";
 
 async function fetchMainCategoriesProducts() {
@@ -19,3 +19,4 @@ async function fetchMainCategoriesProducts() {
 }
 
 export { fetchMainCategoriesProducts };
+ */

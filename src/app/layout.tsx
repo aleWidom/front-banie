@@ -1,4 +1,4 @@
-import AppProvider from "@/components/organisms/AppProvider";
+
 
 export const metadata = {
   title: "Create Next App",
@@ -14,9 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <AppProvider>
         <body className={styles.body}>{children}</body>
-      </AppProvider>
     </html>
   );
 }
