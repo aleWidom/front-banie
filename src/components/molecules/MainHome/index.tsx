@@ -1,5 +1,5 @@
 import { useListProduct } from "@/queries/useListProduct";
-import { CardCategoriesHome } from "@/components/molecules";
+import { ContainerProductsCarrousel } from "@/components/molecules";
 import styles from "./MainHome.module.scss";
 
 export const MainHome = async () => {
@@ -7,9 +7,9 @@ export const MainHome = async () => {
 
   return (
     <div className={styles.containerCategories}>
-      <CardCategoriesHome title="Ofertas" products={data.products} />
-      <CardCategoriesHome title="Destacados" products={data.products} />
-      <CardCategoriesHome title="Lanzamientos" products={data.products} />
+      <ContainerProductsCarrousel title="Ofertas" products={data.products} />
+      <ContainerProductsCarrousel  title="Destacados" products={data.products} />
+      <ContainerProductsCarrousel  title="Lanzamientos"  products={data.products} />
     </div>
   );
 };

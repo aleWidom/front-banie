@@ -1,13 +1,13 @@
 import Image from "next/image";
-import { Product } from "./CardProductHome.types";
-import styles from "./CardProductHome.module.scss";
+import { Product } from "./CardProduct.types";
+import styles from "./CardProduct.module.scss";
 
 interface CardProductHomeProps {
   product: Product;
 }
-export const CardProductHome = ({ product }: CardProductHomeProps) => {
+export const CardProduct = ({ product }: CardProductHomeProps) => {
   return (
-    <div className={styles.containerCategory}>
+    <div className={styles.containerCardProduct}>
       <Image
         width={"100"}
         height={"100"}
@@ -22,4 +22,4 @@ export const CardProductHome = ({ product }: CardProductHomeProps) => {
   );
 };
 
-export default CardProductHome;
+export default CardProduct;

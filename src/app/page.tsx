@@ -1,7 +1,7 @@
 import { MainHome } from "@/components/molecules";
-import styles from "./Home.module.scss";
+import styles from "./HomePage.module.scss";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className={styles.container}>
       <div className={styles.content}>

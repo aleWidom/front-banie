@@ -1,11 +1,15 @@
 import MainHome from './MainHome';
-import CardCategoriesHome from './CardCategoriesHome';
-import CardProductHome from './CardProductHome';
+import MainCategories from './MainCategories';
+import ContainerProducts from './ContainerProducts';
+import ContainerProductsCarrousel from './ContainerProductsCarrousel';
+import CardProduct from './CardProduct';
 import  InputContainer from './MainHome';
 
 export {
-    CardProductHome,
-    CardCategoriesHome,
+    CardProduct,
+    ContainerProducts,
+    ContainerProductsCarrousel,
     MainHome,
+    MainCategories,
     InputContainer
 }

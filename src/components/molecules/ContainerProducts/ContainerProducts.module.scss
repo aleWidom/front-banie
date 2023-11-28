@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  padding: 0px 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.containerCardProduct {
+  width: 49%;
+
+}
+
+
+@media (min-width: 768px) {
+  .containerCardProduct {
+    width: 32%;
+  }
+}
+
+@media (min-width: 976px) {
+  .containerCardProduct {
+    width: 24%;
+  }
+}
