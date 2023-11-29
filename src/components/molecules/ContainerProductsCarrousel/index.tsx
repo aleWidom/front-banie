@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -21,36 +22,40 @@ export const ContainerProductsCarrousel = ({
 }: CardCategoriesHomeProps) => {
   return (
     <>
-        <div className={styles.cardsHome}>
-          <h3>{title}</h3>
-          <Swiper
-            className={styles.swipper}
-            modules={[Navigation, Pagination, Autoplay]}
-            breakpoints={{
-              "340": {
-                slidesPerView: 2,
-                spaceBetween: 5,
-              },
-              "768": {
-                slidesPerView: 3,
-                spaceBetween: 40,
-              },
-              "976": {
-                slidesPerView: 4,
-                spaceBetween: 50,
-              },
-            }}
-            navigation
-            loop={true}
-            autoplay
-          >
-            {products.map((product) => (
-              <SwiperSlide key={product.id}>
+      <div className={styles.cardsHome}>
+        <h3>{title}</h3>
+        <Swiper
+          className={styles.swipper}
+          modules={[Navigation, Pagination, Autoplay]}
+          breakpoints={{
+            "340": {
+              slidesPerView: 2,
+              spaceBetween: 5,
+            },
+            "768": {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            "976": {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+          }}
+          navigation
+          loop={true}
+          autoplay
+        >
+          {products.map((product) => (
+
+            <SwiperSlide key={product.id} >
+              <Link href={`/categories/${product.id}`} className={styles.containerCardProduct} >
                 <CardProduct product={product} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+              </Link>
+            </SwiperSlide>
+
+          ))}
+        </Swiper>
+      </div>
     </>
 
 

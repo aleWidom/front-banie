@@ -1,4 +1,5 @@
 
+import Link from "next/link";
 import { CardProduct } from "@/components/molecules";
 import { Product } from "../CardProduct/CardProduct.types";
 import styles from './ContainerProducts.module.scss'
@@ -15,9 +16,9 @@ export const ContainerProducts = ({
     <>
         <div className={styles.container}>
             {products.map((product) => (
-              <div className={styles.containerCardProduct}>
-                <CardProduct key={product.id} product={product} />
-              </div>
+              <Link href={`/categories/${product.id}`} className={styles.containerCardProduct} key={product.id}>
+                <CardProduct product={product} />
+              </Link>
             ))}
        
         </div>

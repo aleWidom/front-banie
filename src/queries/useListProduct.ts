@@ -28,4 +28,13 @@ async function useListProduct() {
   }
 }
 
-export { useListProduct };
+async function useGetProduct(idProduct: string) {
+  try {
+    const product = await axios.get(`https://dummyjson.com/products/${idProduct}`);
+    return product.data;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export { useListProduct, useGetProduct };
