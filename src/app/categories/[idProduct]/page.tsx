@@ -22,7 +22,7 @@ const DetailProductPage = async ({ params: { idProduct } } : { params: { idProdu
       />
              <h3>{product.title}</h3>
              <h3>${product.price}</h3>
-       <Button text="Agregar al Carrito" size="large"/>
+{/*        <Button text="Agregar al Carrito" size="large"/> */}
         <p>{product.description}</p>
     </div>
   )
