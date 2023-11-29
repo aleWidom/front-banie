@@ -4,13 +4,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+
+  // Estaria bueno agregar el justify content center, para centrar a todo el contenido en el medio.
+  // Hay mas espacio de un lado que del otro
 }
 
+// En mobile, estaria bueno que entre un solo producto en la pantalla, y que tenga el 100%.
 .containerCardProduct {
   width: 49%;
-
 }
-
 
 @media (min-width: 768px) {
   .containerCardProduct {
